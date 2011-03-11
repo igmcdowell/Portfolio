@@ -66,13 +66,7 @@ function setup(pname, tem) {
 }
 
 function init() {
-    var pname = window.location.hash.slice(1);
-    if(pname.length > 0) {
-        select(pname)
-    }
-    else {
-            select('emlo');
-    }
+
 
     $('.navArrow').hover(
     	function() { $(this).addClass('ui-state-hover'); }, 
@@ -82,10 +76,16 @@ function init() {
     $.get('./data/project_template.html', function(data) { //Retrieve the template for presenting projects
       var tem = data;
       setup('emlo', tem);
-      select('emlo');
       setup('anmo', tem);
       setup('recovery', tem);
       setup('portfolio', tem);
+      var pname = window.location.hash.slice(1);
+      if(pname.length > 0) {
+          select(pname)
+      }
+      else {
+              select('emlo');
+      }
     });
     
 	
