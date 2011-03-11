@@ -3,6 +3,10 @@ body {
 	margin-top:0px;
 	background-color:#eee;
 }
+.loading {
+    text-align:center;
+    margin-top:50px;
+}
 
 .mainContent {
 margin:auto;

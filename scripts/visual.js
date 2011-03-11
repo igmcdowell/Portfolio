@@ -1,7 +1,6 @@
 
 //hover states on the static widgets
 
-
 function log(message) {
 	$("#log").append(message)
 	
@@ -80,7 +79,7 @@ function init() {
     	function() { $(this).removeClass('ui-state-hover'); }
     );
     
-    $.get('./data/project_template.html', function(data) {
+    $.get('./data/project_template.html', function(data) { //Retrieve the template for presenting projects
       var tem = data;
       setup('emlo', tem);
       select('emlo');
