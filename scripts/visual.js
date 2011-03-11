@@ -55,6 +55,14 @@ function select(name) {
 	}
 }
 
+function setup(pname) {
+    $('#'+pname+'-tabs').tabs();
+    $('#'+pname+'-tabs-overview').load('./data/'+pname+'.html #overview');
+    $('#'+pname+'-tabs-planning').load('./data/'+pname+'.html #planning');
+    $('#'+pname+'-tabs-development').load('./data/'+pname+'.html #development');
+    $('#'+pname+'-tabs-results').load('./data/'+pname+'.html #results');
+}
+
 function init() {
     var pname = window.location.hash.slice(1);
     if(pname.length > 0) {
@@ -68,10 +76,12 @@ function init() {
     	function() { $(this).addClass('ui-state-hover'); }, 
     	function() { $(this).removeClass('ui-state-hover'); }
     );
-	$('#emlo-tabs').tabs();
-		$('#anmo-tabs').tabs();
-		$('#recovery-tabs').tabs();
-		$('#portfolio-tabs').tabs();
+
+	setup('emlo');
+	setup('anmo')
+	setup('recovery')
+	setup('portfolio');
+	
 	
 }
 
