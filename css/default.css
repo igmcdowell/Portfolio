@@ -173,6 +173,9 @@ padding:15px 15px 2px 15px;
     color:#333;
 }
 
+.tabset .title {
+    float:left; font-size:130%;margin-left:20px;
+}
 .tab-content {
     	padding:0px 10px 10px 10px;
     	font-size:80%;

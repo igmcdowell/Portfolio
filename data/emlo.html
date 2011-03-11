@@ -1,14 +1,34 @@
 <div id="content">
 	<div id="overview">
-		This is the overview
+		<p>
+			Emlo the "tangible broadcast buddy," is a prototype device for broadcasting your current emotion from a given location. User gestures are translated into a corresponding emotion, which is then posted (in combination with the user's location) to Twitter. Emlo was a class final project in collaboration with <a href="http://www.alisonmeier.com/Alison_Meier/Home.html">Alison Meir</a> and <a href="http://www.voytekdesign.com/">Jessica Voytek</a>.
+		</p>
+		<div class="infobox">
+			Final Project Components (Creator in parenthesis):
+			<ul>
+				<li>Sensor Housing - The exterior surface of Emlo (Jessica, Alison)
+				</li>
+				<li>Arduino Sensors and Code - The guts and brains of Emlo, built using an Arduino Duemilanove with flex sensor, force sensor, and photo sensor (Guts: Alison, Brains: Alison, Ian)
+				</li>
+				<li>Python glue code - Local machine code for translating the Arduino serial input into HTTP Requests for the App Engine Back End. (Ian)
+				</li>
+				<li>App Engine Back End - Used to store user messages, store per-user associations between gestures/locations and plain English names, reverse code geodata using the Google Maps API, call the Twitter API, and host the administrator front end. (Ian)
+				</li>
+				<li>
+					<a href="http://emloapp.appspot.com/">App Engine Front End</a> - Administrator controls for managing descriptions of locations and gestures to be used in posted tweets. Also includes tool for generating fake tweets for demonstration purposes. (Ian)
+				</li>
+				<li>Visual Assets - The project poster, clay prototypes, and digital renderings of Emlo (Jessica).
+				</li>
+			</ul>Complete Emlo source code is available on request.
+		</div>
 	</div>
 	<div id="planning">
-		This is the planning stuff
+		Emlo Planning
 	</div>
 	<div id="development">
-		Development text
+		Emlo development
 	</div>
 	<div id="results">
-		Results
+		Emlo results
 	</div>
 </div>
