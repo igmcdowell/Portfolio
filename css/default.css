@@ -97,7 +97,7 @@ padding:15px 15px 2px 15px;
 	position:relative;
 }
 .project {
-	display:none;
+/*	display:none;*/
 
 	
 }
@@ -160,7 +160,7 @@ padding:15px 15px 2px 15px;
 	width:130px;
 	height:18px;
 	border:1px solid #ccc;
-	display:none;
+
 	cursor: pointer;
 }
 
