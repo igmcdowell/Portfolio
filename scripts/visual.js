@@ -55,12 +55,15 @@ function select(name) {
 	}
 }
 
-function setup(pname) {
+function setup(pname, tem) {
+    skel = $.tmpl(tem, {"Name" : pname });
+    $('#projects').append(skel);
     $('#'+pname+'-tabs').tabs();
     $('#'+pname+'-tabs-overview').load('./data/'+pname+'.html #overview');
     $('#'+pname+'-tabs-planning').load('./data/'+pname+'.html #planning');
     $('#'+pname+'-tabs-development').load('./data/'+pname+'.html #development');
     $('#'+pname+'-tabs-results').load('./data/'+pname+'.html #results');
+
 }
 
 function init() {
@@ -76,12 +79,16 @@ function init() {
     	function() { $(this).addClass('ui-state-hover'); }, 
     	function() { $(this).removeClass('ui-state-hover'); }
     );
-
-	setup('emlo');
-	setup('anmo')
-	setup('recovery')
-	setup('portfolio');
-	
+    
+    $.get('./data/project_template.html', function(data) {
+      var tem = data;
+      setup('emlo', tem);
+      select('emlo');
+      setup('anmo', tem);
+      setup('recovery', tem);
+      setup('portfolio', tem);
+    });
+    
 	
 }
 
