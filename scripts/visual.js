@@ -1,6 +1,6 @@
 //setup takes a project name and a template. It creates/appends a DOM skeleton to hold the data related to the project, then loads the data.
 function setup(pname, tem) {
-    skel = $.tmpl(tem, {
+    var skel = $.tmpl(tem, {
         "Name": pname
     });
     $('#projects').append(skel);
@@ -12,12 +12,18 @@ function setup(pname, tem) {
 
 }
 
-function select(pname) {
+function select(loc) {
+    var components = loc.split('-');
+    var pname = components[0];
+    if(components.length > 1) {
+        var tab = 
+        $('#' + pname + '-tabs').tabs('select', components[0]+'-tabs-' + components[1]);
+    }
     $("#projects").trigger("slideTo", $("#" + pname+'-project'));
 }
 
-function setHash(pname) {
-    window.location.hash = pname;
+function setHash(loc) {
+    window.location.hash = loc;
 }
 
 function makeProjectCarousel(projects) {
