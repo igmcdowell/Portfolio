@@ -1,4 +1,4 @@
-<div class="project" id="${Name}">
+<div class="project" id="${Name}-project">
 	<div class="topAccent"></div>
 	<div id="${Name}-tabs" class="tabset">
 		<div>
@@ -6,16 +6,16 @@
 		</div>
 		<ul style="float:right;">
 			<li>
-				<a href="#${Name}-tabs-overview">Overview</a>
+				<a href="#${Name}-tabs-overview" onclick="setHash('${Name}-overview')">Overview</a>
 			</li>
 			<li>
-				<a href="#${Name}-tabs-planning">Planning</a>
+				<a href="#${Name}-tabs-planning" onclick="setHash('${Name}-planning')">Planning</a>
 			</li>
 			<li>
-				<a href="#${Name}-tabs-development">Development</a>
+				<a href="#${Name}-tabs-development" onclick="setHash('${Name}-development')">Development</a>
 			</li>
 			<li>
-				<a href="#${Name}-tabs-results">Results</a>
+				<a href="#${Name}-tabs-results" onclick="setHash('${Name}-results')">Results</a>
 			</li>
 		</ul>
 		<div style="clear:both"></div>

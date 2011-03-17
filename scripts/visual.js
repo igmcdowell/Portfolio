@@ -13,10 +13,10 @@ function setup(pname, tem) {
 }
 
 function select(pname) {
-    $("#projects").trigger("slideTo", $("#" + pname));
+    $("#projects").trigger("slideTo", $("#" + pname+'-project'));
 }
 
-function setHash(pname, sect) {
+function setHash(pname) {
     window.location.hash = pname;
 }
 
@@ -39,7 +39,7 @@ function makeProjectCarousel(projects) {
         pagination: {
             anchorBuilder: function() {
                 project = projects.pop();
-                return '<li id="' + project + '-nav"><a href="#' + project + '" class="caroufredsel" onclick="setHash('+"'"+ project + "'"+')"><img src="images/' + project + '_thumb.png" alt="' + project + '_thumb"><br><span>' + project + '</span></a></li>';
+                return '<li id="' + project + '"><a href="#' + project + '" class="caroufredsel" onclick="setHash('+"'"+ project + "'"+')"><img src="images/' + project + '_thumb.png" alt="' + project + '_thumb"><br><span>' + project + '</span></a></li>';
             },
             container: "#navButtons"
         }
