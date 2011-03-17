@@ -102,6 +102,16 @@ padding:15px 15px 2px 15px;
 	
 }
 
+.nameHeading {
+    margin-left:15px;
+    padding-top:10px;
+    text-transform:capitalize;
+    font-size:120%;
+    margin-bottom:-10px;
+
+
+}
+
 .project h2 {
     margin:0px;
     padding-bottom:0px;
