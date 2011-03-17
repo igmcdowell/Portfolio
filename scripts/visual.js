@@ -64,6 +64,12 @@ function makeProjectCarousel(projects) {
 
 
 function init() {
+    $(window).hashchange( function(){
+    
+    // Alerts every time the hash changes!
+    
+    setview()
+    }); //monitor for hashchanges and react.
     var projects = ['emlo', 'anmo', 'recovery', 'portfolio']
     // These names of the projects used to generate navigation and content. They should map to the directory structure.
     //add hover states on the static widgets
@@ -91,4 +97,3 @@ function init() {
 }
 
 window.onload = init;
-window.onhashchange = setview;
