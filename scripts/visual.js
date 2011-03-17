@@ -12,12 +12,15 @@ function setup(pname, tem) {
 
 }
 
-function select(loc) {
+function setview() {
+    loc = window.location.hash.slice(1);
     var components = loc.split('-');
     var pname = components[0];
     if(components.length > 1) {
-        var tab = 
         $('#' + pname + '-tabs').tabs('select', components[0]+'-tabs-' + components[1]);
+    }
+    else {
+        $('#' + pname + '-tabs').tabs('select', components[0]+'-tabs-overview');
     }
     $("#projects").trigger("slideTo", $("#" + pname+'-project'));
 }
@@ -54,11 +57,9 @@ function makeProjectCarousel(projects) {
     var pname = window.location.hash.slice(1);
     //This is logic to load the appropriate page. TODO
     if (pname.length > 0) {
-        select(pname);
+        setview();
     }
-    else {
-        //select('emlo');
-        }
+
 }
 
 
@@ -90,3 +91,4 @@ function init() {
 }
 
 window.onload = init;
+window.onhashchange = setview;
