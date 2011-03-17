@@ -1,15 +1,18 @@
 //setup takes a project name and a template. It creates/appends a DOM skeleton to hold the data related to the project, then loads the data.
 function setup(pname, tem) {
+    $('#projects-loading').remove();
     var skel = $.tmpl(tem, {
         "Name": pname
     });
     $('#projects').append(skel);
     $('#' + pname + '-tabs').tabs();
+}
+
+function fillIn(pname) {
     $('#' + pname + '-tabs-overview').load('./data/' + pname + '.html #overview');
     $('#' + pname + '-tabs-planning').load('./data/' + pname + '.html #planning');
     $('#' + pname + '-tabs-development').load('./data/' + pname + '.html #development');
     $('#' + pname + '-tabs-results').load('./data/' + pname + '.html #results');
-
 }
 
 function setview() {
@@ -30,6 +33,7 @@ function setHash(loc) {
 }
 
 function makeProjectCarousel(projects) {
+    
     //Create a carousel of the projects - this creates the navigation and the animations for the items.
     $("#projects").carouFredSel({
         direction: "up",
@@ -53,7 +57,7 @@ function makeProjectCarousel(projects) {
             container: "#navButtons"
         }
     });
-
+    $("#nav-loading").remove();
     var pname = window.location.hash.slice(1);
     //This is logic to load the appropriate page. TODO
     if (pname.length > 0) {
@@ -64,11 +68,8 @@ function makeProjectCarousel(projects) {
 
 
 function init() {
-    $(window).hashchange( function(){
-    
-    // Alerts every time the hash changes!
-    
-    setview()
+    $(window).hashchange( function(){    
+        setview()
     }); //monitor for hashchanges and react.
     var projects = ['emlo', 'anmo', 'recovery', 'portfolio']
     // These names of the projects used to generate navigation and content. They should map to the directory structure.
@@ -89,10 +90,14 @@ function init() {
         for (var i = 0; i < projects.length; i++) {
             setup(projects[i], tem)
         }
-        projects.reverse();
+        var caroprojects = projects.slice(0);
+        caroprojects.reverse();
         //it's necesary to reverse the projects as the carousel loads them in opposite order.
-        makeProjectCarousel(projects);
+        makeProjectCarousel(caroprojects);
         //make the carousel when it's done
+        for (var i = 0; i < projects.length; i++) {
+            fillIn(projects[i]);
+        }
     });
 }
 
