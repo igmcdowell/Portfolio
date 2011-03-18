@@ -1,32 +1,43 @@
 <div id="content">
 	<div id="overview">
+		<div class="span-image"><img src="./images/emlo_front.jpg" alt="front view of Emlo"/></div>
 		<p>
 			Emlo the "tangible broadcast buddy," is a prototype device for broadcasting your current emotion from a given location. User gestures are translated into a corresponding emotion, which is then posted (in combination with the user's location) to Twitter. Emlo was a class final project in collaboration with <a href="http://www.alisonmeier.com/Alison_Meier/Home.html">Alison Meir</a> and <a href="http://www.voytekdesign.com/">Jessica Voytek</a>.
 		</p>
-		<div class="infobox">
-			Final Project Components (Creator in parenthesis):
-			<ul>
-				<li>Sensor Housing - The exterior surface of Emlo (Jessica, Alison)
-				</li>
-				<li>Arduino Sensors and Code - The guts and brains of Emlo, built using an Arduino Duemilanove with flex sensor, force sensor, and photo sensor (Guts: Alison, Brains: Alison, Ian)
-				</li>
-				<li>Python glue code - Local machine code for translating the Arduino serial input into HTTP Requests for the App Engine Back End. (Ian)
-				</li>
-				<li>App Engine Back End - Used to store user messages, store per-user associations between gestures/locations and plain English names, reverse code geodata using the Google Maps API, call the Twitter API, and host the administrator front end. (Ian)
-				</li>
-				<li>
-					<a href="http://emloapp.appspot.com/">App Engine Front End</a> - Administrator controls for managing descriptions of locations and gestures to be used in posted tweets. Also includes tool for generating fake tweets for demonstration purposes. (Ian)
-				</li>
-				<li>Visual Assets - The project poster, clay prototypes, and digital renderings of Emlo (Jessica).
-				</li>
-			</ul>Complete Emlo source code is available on request.
-		</div>
+	
 	</div>
 	<div id="planning">
-		Emlo Planning
+		<p>Emlo was born out of an interest to explore gestural expression of emotion. After brainstorming different methods of exploring this question, we settled on the idea of a digital pet capable of divining and relaying how its master is feeling. Given this goal, we set about exploring how individuals might express emotion. We started with a small number of exploratory <strong>interviews</strong>, and used the output to produce a close-ended <strong>survey</strong> for use with a larger audience. Finally, we compared our findings with our capabilities to <strong>determine what to build</strong>.
+			</p>
+			<h2>Interviews</h2>
+			<p>We scoured a local drugstore for tangible artifacts with unique tactile or ballistic properties that could potentially be incorporated into a final project. We settled on a ping pong ball (bouncy, aerodynamic), sponge (squishy, deformable), hair scrunchy (elastic, deformable), and hair roller (spiny, rollable).</p>
+			<p>Six participants were individually interviewed and asked to model each of eight basic emotions using the provided materials. The gestures used were recorded and clustered by action. Ten distinct gestures were identified, which served as the basis for a follow-on survey.</p>
+			<h2>Survey</h2>
+			<p>We created a clay prototype and used it to demonstrate each gesture identified in the exploratory interviews in a series of <a href="http://www.youtube.com/watch?v=TV7p-Sie1IY">short video clips</a>. We incorporated these in an <a href="http://polldaddy.com/s/8507DE474270E922">online survey</a> asking users to map each of the eight emotions to one gesture (some gestures were left over). The 35 responses showed strongest agreement in gesture/emotion mappings for anger, sadness, joy, and surprise.</p>
+			<h2>Determining What to Build</h2>
+			<p><strong>Hardware</strong>: The class was taught using Arduino, so we used a Duemilanove as the microcontroller. We assessed the top four emotion/gesture pairs for feasibility of implementation with off-the-shelf sensors, and determined we could model all four using less than $30 of additional parts.</p>
+			<p><strong>Software</strong>: We wanted to broadcast the messages created by Emlo, and settled on Twitter as the platform due to its familiarity and easy/robust API. The only option we found for reverse-geocoding coordinates was the Google Maps API, which won by default. We also wanted to add some additional functionality, such as customizable emotion labels, customizable location labels, and "listen" mode where Emlo receives data from other virtual Emlo devices. Due to my existing familiarity with Django, we decided the most robust and simple solution was to use Google App Engine as the middle layer handling these tasks. 
+				</p>
 	</div>
 	<div id="development">
-		Emlo development
+			<div class="infobox">
+				Final Project Components (Creator in parenthesis):
+				<ul>
+					<li>Sensor Housing - The exterior surface of Emlo (Jessica, Alison)
+					</li>
+					<li>Arduino Sensors and Code - The guts and brains of Emlo, built using an Arduino Duemilanove with flex sensor, force sensor, and photo sensor (Guts: Alison, Brains: Alison, Ian)
+					</li>
+					<li>Python glue code - Local machine code for translating the Arduino serial input into HTTP Requests for the App Engine Back End. (Ian)
+					</li>
+					<li>App Engine Back End - Used to store user messages, store per-user associations between gestures/locations and plain English names, reverse code geodata using the Google Maps API, call the Twitter API, and host the administrator front end. (Ian)
+					</li>
+					<li>
+						<a href="http://emloapp.appspot.com/">App Engine Front End</a> - Administrator controls for managing descriptions of locations and gestures to be used in posted tweets. Also includes tool for generating fake tweets for demonstration purposes. (Ian)
+					</li>
+					<li>Visual Assets - The project poster, clay prototypes, and digital renderings of Emlo (Jessica).
+					</li>
+				</ul>Complete Emlo source code is available on request.
+			</div>
 	</div>
 	<div id="results">
 		Emlo results

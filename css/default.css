@@ -180,6 +180,17 @@ padding:15px 15px 2px 15px;
 	overflow:hidden;
 }
 
+
+.span-image {
+
+text-align:center;
+margin-top:10px;
+}
+
+.span-image img {
+            border:1px solid;
+}
+
 #footer {
     padding-top:5px;
     color:#ccc;
