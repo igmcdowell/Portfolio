@@ -49,8 +49,6 @@ function makeProjectCarousel(projects) {
             button: "#up",
             key: "left"
         },
-        padding: [0,0,20,0],
-        height: 618,
         pagination: {
             anchorBuilder: function() {
                 project = projects.pop();

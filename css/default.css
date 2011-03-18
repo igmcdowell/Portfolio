@@ -181,10 +181,21 @@ padding:15px 15px 2px 15px;
 }
 
 #footer {
+    padding-top:5px;
     color:#ccc;
     font-size:50%;
-    text-align:center;
+    text-align:right;
     clear:both;
+
+}
+
+#license {
+    border-width:0;
+    vertical-align:bottom;
+}
+
+#licenseText{
+        margin-right:100px;
 }
 /* Tabs stuff */
 
