@@ -1,14 +1,46 @@
 <div id="content">
 	<div id="overview">
-		This is the overview
+		<h2>Purpose</h2>
+		<p>My portfolio is a self-directed project intended to showcase a subset of my accomplishments while highlighting some of my web design and coding capabilities.</p>
+		<p>Some of the original concept work was completed through an individual assignment for an interaction design course at UC Berkeley.</p>
+		<h2>Technologies</h2>
+		<p>The portfolio is written entirely using Javascript, HTML, and CSS.</p>
+		<ul>
+			<li>jQuery for </li>
+			</ul>
 	</div>
 	<div id="planning">
-		This is the planning stuff
+		<p>The planning of this project involved <strong>identifying the audience</strong>, <strong>determining requirements</strong>, and <strong>sketching solutions</strong>.</p>
+		<h2>Audience</h2>
+		<p>I decided that the most relevant user of my portfolio would be a hiring manager or recruiter involved in pre-screening candidates or reviewing my work prior to an interview. For either case, the needs were similar:</p>
+		<ul>
+			<li>Understand the type of projects I've worked on.</li>
+			<li>Determine my skill-level with the technologies listed on my resume.</li>
+			<li>Assess the quality of the work I've produced.</li>
+			<li>Find some material to ask questions about (interviewer), or a reason to disqualify my candidacy (recruiter/screener).</li>
+			<li>Complete the above in five minutes or less, potentially on a mobile device.</li>
+		</ul>
+
+		<h2>Requirements</h2>
+		<p>Based on the audience identified above, I decided that my portfolio should feature no more than four projects, show a cross-section of the type of work I've done, clearly explain my role in the project and the technologies I used, and allow comprehension at varying levels of specificity. Navigation should be as intuitive as possible, and page loads should be kept to a bare minimum.</p>
+		
+		<h2>Sketches</h2>
+		<p>
+		Given the constraints I'd determined, I executed some quick sketches of different interface possibilities. Click on a thumbnail to view a larger image.	
+		</p>
 	</div>
 	<div id="development">
-		Development text
+		<p>For my first pass, I built out a skeleton of the page using the best aspects of my initial drafts. My focus for the first pass was to render a single project by creating a sound structure for the content with the details of the presentation handled by CSS. Once I was happy with the layout, I focused on making the interactive site <strong>flexible</strong> and <strong>fast</strong></p>
+		<h2>Building in Flexibility</h2>
+		<p>I started with a jQuery base to gain more robust access to the DOM. I then took advantage of the jQuery template plugin to modularize the individual projects. With this structure in place it is trivial to make changes to all projects at once, or swap out one project for another. While not as powerful as an MVC framework like Rails or Django, jQuery templates have the advantage of being able to run on any server capable of hosting HTML.</p>
+		<h2>Making it Fast</h2>
+		<p>Knowing that my audience is potentially pressed for time and/or on a slower mobile connection, I wanted to do everything possible to speed up the experience. A pair of jQuery plugins (jQuery UI and carouFredSel) gave me access to rich interactions that eliminated the need for page loads. I find animations useful for orienting the user, but I was careful to keep them to a minimum and ensure they were fast enough that the user isn't left waiting on them.</p>
+		<p>To speed up the perceived initial load time, I pushed the content retrieval to asynchronous requests. After the initial skeleton is built by javascript, each project is retrieved in order. This allows a visitor to get acquainted with the layout and start reading about the first project while the rest of the page finishes loading.</p>
+		<h2>Source</h2>
+		<p>The <a href="https://github.com/igmcdowell/Portfolio">source code</a> is available on GitHub.</p>
 	</div>
 	<div id="results">
-		Results
+		<p>While I'm personally happy with the results, the success of this project is still to be determined. I encourage you to send bugs, feedback, and job offers to <a href="mailto:igmcdowell@gmail.com">igmcdowell@gmail.com</a></p>
+		<p>If you'd like to use this site structure for your own portfolio, you are welcome to do so. My only requirement is that you preserve the attribution in the footer. The <a href="https://github.com/igmcdowell/Portfolio">complete source code</a> is available on GitHub.</p>
 	</div>
 </div>
