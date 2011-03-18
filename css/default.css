@@ -6,9 +6,6 @@ margin-top: 0px;
 background-color: #eee;
 }
 
-/* ===== End general ===== */
-
-
 .loading {
 text-align: center;
 margin-top: 50px;
@@ -21,6 +18,9 @@ background-color: #fff;
 padding: 0px 10px 10px 10px;
 border: 1px solid #ccc;
 }
+
+/* ===== End general ===== */
+
 
 /* ===== Header ===== */
 #header h1 {
@@ -186,7 +186,6 @@ border: 1px solid;
 /* End project contents */
 
 
-
 /* ===== Footer ===== */
 #footer {
 padding-top: 5px;
@@ -206,6 +205,7 @@ margin-right: 100px;
 }
 
 /* ===== End Footer ===== */
+
 
 /* ===== Tabs ===== */
 
@@ -256,4 +256,3 @@ border-radius: 0px;
 -webkit-border-radius: 0px;
 }
 /* ===== End Tabs ===== */
-
