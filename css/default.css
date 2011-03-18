@@ -1,236 +1,259 @@
+/*  ===== General ===== */
+
 body {
-	font-family:'Arimo', arial, serif;
-	margin-top:0px;
-	background-color:#eee;
+font-family: 'Arimo', arial, serif;
+margin-top: 0px;
+background-color: #eee;
 }
+
+/* ===== End general ===== */
+
+
 .loading {
-    text-align:center;
-    margin-top:50px;
+text-align: center;
+margin-top: 50px;
 }
 
 .mainContent {
-margin:auto;
-width:1000px;	
-background-color:#fff;
-padding:0px 10px 10px 10px;
-border:1px solid #ccc;
+margin: auto;
+width: 1000px;
+background-color: #fff;
+padding: 0px 10px 10px 10px;
+border: 1px solid #ccc;
 }
 
-.pageHeader h1 {
-	margin:0px 0px 10px 0px;
-	padding:8px 0px 8px 0px;	
-text-align:center;
-font-family:'Ubuntu', arial, serif;
-background-color:#aaa;
+/* ===== Header ===== */
+#header h1 {
+margin: 0px 0px 10px 0px;
+padding: 8px 0px 8px 0px;
+text-align: center;
+font-family: 'Ubuntu', arial, serif;
+background-color: #aaa;
 -moz-border-radius: 0px 0px 5px 5px;
 border-radius: 0px 0px 5px 5px;
-border:1px solid #ccc;
-border-top:none;
+border: 1px solid #ccc;
+border-top: none;
 background: url(custom-theme/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
 }
+/* ===== End header ===== */
 
-.projectNav {
-	float:left;
-	width:142px;
-	height:623px;
-	padding:0px;
-	background-color:white;
-	border:1px solid #ccc;
-	padding:3px;
-	-webkit-border-radius:3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+
+/* ===== Navigation ===== */
+
+#projectNav {
+float: left;
+width: 142px;
+height: 623px;
+padding: 0px;
+background-color: white;
+border: 1px solid #ccc;
+padding: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
 }
 
-.projectNav ul {
-	padding:5px 5px 0px 5px;
-	margin: 0px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-border-radius:3px;
-
-}
-.projectNav li {
-list-style:none;
-margin-left:0px;
-margin-bottom:5px;
-text-align:center;
-
+#projectNav ul {
+padding: 5px 5px 0px 5px;
+margin: 0px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+-webkit-border-radius: 3px;
 }
 
-.projectNav li:hover {
-    background: #dadada url(custom-theme/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+#projectNav li {
+list-style: none;
+margin-left: 0px;
+margin-bottom: 5px;
+text-align: center;
+}
+
+#projectNav li:hover {
+background: #dadada url(custom-theme/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 5px;
-cursor:pointer;
+cursor: pointer;
 }
 
-.projectNav li.selected {
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	background:#aaa url(custom-theme/images/ui-bg_glass_80_aaaaaa_1x400.png?11) 50% 50% repeat-x;
-}		
-
-.projectNav li.selected a:hover {
-	cursor:default;
-}
-.projectNav li img {
-	width:95px;
-	height:95px;
-	border:1px solid;
-}
-	
-.projectNav li a {
-padding:15px 15px 2px 15px;
-    text-decoration:none;
-    color:black;
-    display:block;
-}	
-
-	
-.projectContent {
-	float:left;
-	width:835px;
-	margin-left:15px;
-	position:relative;
-}
-.project {
-/*	display:none;*/
-	
+#projectNav li img {
+width: 95px;
+height: 95px;
+border: 1px solid;
 }
 
-.nameHeading {
-    margin-left:15px;
-    padding-top:10px;
-    text-transform:capitalize;
-    font-size:120%;
-    margin-bottom:-10px;
-
-
+#projectNav li a {
+padding: 15px 15px 2px 15px;
+text-decoration: none;
+color: black;
+display: block;
 }
 
-.project h2 {
-    margin:0px;
-    padding-bottom:0px;
-    font-size:1em;   
+#projectNav li.selected {
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+background: #aaa url(custom-theme/images/ui-bg_glass_80_aaaaaa_1x400.png?11) 50% 50% repeat-x;
 }
 
-
-
-.infobox{
-    width:700px;
-    margin:auto;
-    border:1px solid#ccc;
-    background-color:#efefef;
-    padding:8px;
-    clear:both;
+#projectNav li.selected a:hover {
+cursor: default;
 }
 
-.tabs.title {
-    padding-top:10px;
+#projectNav .navArrow {
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-border-radius: 8px;
+margin: auto;
+width: 130px;
+height: 18px;
+border: 1px solid #ccc;
+cursor: pointer;
 }
 
-
-.topAccent {
-    background-color:#000839;
-    height:10px;
-    border-radius:5px 5px 0px 0px;
-}
-
-.bottomAccent {
-	height:10px;
-	background-color:#000839;
-	width:835px;
-	-moz-border-radius: 0px 0px 5px 5px;
-	border-radius: 0px 0px 5px 5px;
-	-webkit-border-radius: 0px 0px 5px 5px;
-}
-
-
-#log {
-	clear:both;
-	display:none;
+#projectNav .arrow {
+margin: auto;
 }
 
 #up {
- margin-top:5px;
+margin-top: 5px;
 }
 
-#down {
+/* ===== End navigation ===== */
 
-}
-.navArrow {
-    -moz-border-radius: 8px;
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	margin: auto;
-	width:130px;
-	height:18px;
-	border:1px solid #ccc;
 
-	cursor: pointer;
+/* ===== Project contents =====*/
+#projects-container {
+float: left;
+width: 835px;
+margin-left: 15px;
+position: relative;
 }
 
-.arrow {
-    margin:auto;
-}
 #projects {
-	overflow:hidden;
+overflow: hidden;
+}
+
+#projects .project h2 {
+margin: 0px;
+padding-bottom: 0px;
+font-size: 1em;
+text-decoration: underline;
+}
+
+#projects .project .nameHeading {
+margin-left: 15px;
+padding-top: 10px;
+text-transform: capitalize;
+font-size: 120%;
+margin-bottom: -10px;
+}
+
+#projects .project .infobox {
+width: 700px;
+margin: auto;
+border: 1px solid#ccc;
+background-color: #efefef;
+padding: 8px;
+clear: both;
 }
 
 
-.span-image {
-
-text-align:center;
-margin-top:10px;
+#projects .project .topAccent {
+background-color: #000839;
+height: 10px;
+border-radius: 5px 5px 0px 0px;
 }
 
-.span-image img {
-            border:1px solid;
+#projects .project .bottomAccent {
+height: 10px;
+background-color: #000839;
+width: 835px;
+-moz-border-radius: 0px 0px 5px 5px;
+border-radius: 0px 0px 5px 5px;
+-webkit-border-radius: 0px 0px 5px 5px;
 }
 
+#projects .project .span-image {
+text-align: center;
+margin-top: 10px;
+}
+
+#projects .project .span-image img {
+border: 1px solid;
+}
+
+/* End project contents */
+
+
+
+/* ===== Footer ===== */
 #footer {
-    padding-top:5px;
-    color:#ccc;
-    font-size:50%;
-    text-align:right;
-    clear:both;
-
+padding-top: 5px;
+color: #ccc;
+font-size: 50%;
+text-align: right;
+clear: both;
 }
 
 #license {
-    border-width:0;
-    vertical-align:bottom;
+border-width: 0;
+vertical-align: bottom;
 }
 
-#licenseText{
-        margin-right:100px;
+#licenseText {
+margin-right: 100px;
 }
-/* Tabs stuff */
+
+/* ===== End Footer ===== */
+
+/* ===== Tabs ===== */
 
 .tabset li a {
-    color:#333;
+color: #333;
 }
 
 .tabset .title {
-    float:left; font-size:130%;margin-left:20px;
+float: left;
+font-size: 130%;
+margin-left: 20px;
 }
 .tab-content {
-    	padding:0px 10px 10px 10px;
-    	font-size:80%;
-	    }
-#projects .project .tabset{
-    	height:612px;
-    	    border-left:1px solid #ccc;
-        	border-right:1px solid #ccc;
-        	-moz-border-radius: 0px;
-        	border-radius: 0px;
-        	-webkit-border-radius: 0px;
+padding: 0px 10px 10px 10px;
+font-size: 80%;
 }
 
+.tabs.title {
+padding-top: 10px;
+}	    
 
-.ui-tabs  .ui-state-default{background:none !important; border-left:none !important;border-right:none !important;border-top:none !important;
-    }
-.ui-tabs .ui-corner-top { -moz-border-radius-topleft: 0px; -webkit-border-top-left-radius: 0px; border-top-left-radius: 0px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; border-top-right-radius: 0px; }
+.ui-tabs-nav {
+margin-bottom: 1em !important;
+}
+
+.ui-tabs  .ui-state-default {
+background: none !important;
+border-left: none !important;
+border-right: none !important;
+border-top: none !important;
+}
+
+.ui-tabs .ui-corner-top {
+-moz-border-radius-topleft: 0px;
+-webkit-border-top-left-radius: 0px;
+border-top-left-radius: 0px;
+-moz-border-radius-topright: 0px;
+-webkit-border-top-right-radius: 0px;
+border-top-right-radius: 0px;
+}
+        	    
+#projects .project .tabset {
+height: 612px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+-moz-border-radius: 0px;
+border-radius: 0px;
+-webkit-border-radius: 0px;
+}
+/* ===== End Tabs ===== */
+
