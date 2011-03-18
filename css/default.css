@@ -98,7 +98,6 @@ padding:15px 15px 2px 15px;
 }
 .project {
 /*	display:none;*/
-margin-bottom:20px;
 	
 }
 
@@ -181,6 +180,12 @@ margin-bottom:20px;
 	overflow:hidden;
 }
 
+#footer {
+    color:#ccc;
+    font-size:50%;
+    text-align:center;
+    clear:both;
+}
 /* Tabs stuff */
 
 .tabset li a {
