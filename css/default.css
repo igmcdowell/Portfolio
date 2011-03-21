@@ -4,7 +4,7 @@ body {
 font-family: 'Arimo', arial, serif;
 margin-top: 0px;
 background-color: #eee;
-width: 1050px;
+
 }
 
 .loading {
@@ -13,6 +13,7 @@ margin-top: 50px;
 }
 
 .mainContent {
+width: 1028px;
 margin: auto;
 background-color: #fff;
 padding: 0px 10px 10px 10px;

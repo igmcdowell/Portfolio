@@ -121,13 +121,13 @@ function init() {
     $("#up").bind("click", function(){
         var pname = window.location.hash.split('-')[0].slice(1);
         var newp = getNext('backward', pname, projects);
-        setHash('#'+newp);
+        setHash(newp);
     });
     
     $("#down").bind("click", function(){
         var pname = window.location.hash.split('-')[0].slice(1);
         var newp = getNext('forward', pname, projects);
-        setHash('#'+newp);
+        setHash(newp);
     });
     // These names of the projects used to generate navigation and content. They should map to the directory structure.
     //add hover states on the static widgets
