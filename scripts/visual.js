@@ -84,14 +84,6 @@ function makeProjectCarousel(projects) {
         auto: {
             play: false
         },
-        /*next: {
-            button: "#down",
-            key: "right"
-        },
-        prev: {
-            button: "#up",
-            key: "left"
-        },*/
         pagination: {
             anchorBuilder: function() {
                 project = projects.pop();

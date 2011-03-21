@@ -32,16 +32,19 @@
 					Ian McDowell
 				</h1>
 			</div>
-			<div id="projectNav">
-				<div id="up" class="navArrow ui-state-default" onclick="">
+			<div id="nav">
+				<div id="up" class="navArrow ui-state-default" onclick='$("#projects").trigger("prev", 1)'>
 					<div class="arrow ui-icon ui-icon-triangle-1-n"></div>
 				</div>
+			<div id="projectNav">
 				<ul id="navButtons">
 					<div class="loading" id="nav-loading"><img src="./images/loader.gif" /></div>
 				</ul>
-				<div id="down" class="navArrow ui-state-default" onclick="">
-					<div class="arrow ui-icon ui-icon-triangle-1-s"></div>
-				</div>
+
+			</div>
+			<div id="down" class="navArrow ui-state-default" onclick='$("#projects").trigger("next", 1)'>
+				<div class="arrow ui-icon ui-icon-triangle-1-s"></div>
+			</div>
 			</div>
 			<div id="projects-container">
 						<div class="loading" id="projects-loading"><img src="./images/loader.gif" /><br />Loading page structure. Be with you shortly.</div>

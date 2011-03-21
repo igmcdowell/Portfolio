@@ -40,7 +40,7 @@ background: url(custom-theme/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% rep
 
 /* ===== Navigation ===== */
 
-#projectNav {
+#nav {
 float: left;
 width: 142px;
 height: 623px;
@@ -100,7 +100,7 @@ background: #aaa url(custom-theme/images/ui-bg_glass_80_aaaaaa_1x400.png?11) 50%
 cursor: default;
 }
 
-#projectNav .navArrow {
+#nav .navArrow {
 -moz-border-radius: 8px;
 border-radius: 8px;
 -webkit-border-radius: 8px;
@@ -111,7 +111,7 @@ border: 1px solid #ccc;
 cursor: pointer;
 }
 
-#projectNav .arrow {
+#nav .arrow {
 margin: auto;
 }
 
@@ -262,7 +262,10 @@ border-radius: 0px;
     #projectNav { 
         display:none;
     }
-    
+    #nav {
+        height:auto;
+        border:0px;
+    }
     .mainContent {
         width:640px;
         padding:0px 5px 0px 5px;
@@ -290,6 +293,10 @@ border-radius: 0px;
     }
     #caroufredsel_wrapper {
         width:640px;
+    }
+    
+    #up {
+        display:block;
     }
 }
 
