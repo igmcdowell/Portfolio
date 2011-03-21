@@ -274,9 +274,10 @@ border-radius: 0px;
     }
     .mainContent {
         padding:0px 5px 0px 5px;
+        width:630px;
     }
     body {
-        width:640px;
+
         font-size:80%;
         margin:0px;
         padding:0px;
@@ -336,50 +337,70 @@ border-radius: 0px;
 }
 
 @media screen and (max-width: 400px) {
+    #projectNav { 
+        display:none;
+    }
     #nav {
         height:auto;
         border:0px;
     }
-    #projectNav { 
-        display:none;
-    }
-    
     .mainContent {
-        width:400px;
         padding:0px 5px 0px 5px;
+        width:390px;
     }
     body {
+
         font-size:70%;
         margin:0px;
+        padding:0px;
+    }
+    img {
+        max-width:360px;
     }
     #header h1 {
     padding: 4px 0px 4px 0px;
-    font-size:1em;
+    font-size:1.5em;
     }
     #projects-container {
-        width:382px;
+        width:388px;
         padding:0px;
         margin:0px;
     }
     #projects .project .infobox {
-        width:350px;
+        width:330px;
     }
     
     #projects {
-        width:400px;
         padding:0px;
     }
-    #caroufredsel_wrapper  {
-        width:382px !important;
+    #caroufredsel_wrapper {
     }
     
-    img {
-        max-width:360px;
-    }
-    
-#projects .project .nameHeading {
-        margin-bottom:0px;
+    #nav {
+        width:99%;
         text-align:center;
-        text-decoration:underline;
+        position:relative;
+    }
+    #nav .navArrow {
+        width:300px;
+        height:30px;
+        margin:auto;
+    }
+    
+    #nav .navArrow .arrowLabel {
+        position:relative;
+        top:-6px;
+        display:block;
+        
+    }
+    
+    #down {
+        position:absolute;
+        top:675px;
+        left:50px;
+    }
+    
+    #footer {
+        padding-top:40px;
     }
 }
