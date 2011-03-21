@@ -29,46 +29,52 @@ function setview() {
 }
 
 
+function getNext(direction, iname, items) {
+   var iindex = items.indexOf(iname);
+   if (direction == 'forward') {
+        if(iindex == items.length-1){ /* we need to loop around to the next project */
+            newi = items[0];
+        }
+        else {
+            newi = items[iindex +1];
+        }
+   }
+   else {
+       if (iindex == 0){ //we need to loop backward to the previous project 
+           newi = items[items.length-1];
+       }
+       else {
+           newi = items[iindex-1];
+       }  
+   } 
+   return newi;
+}
+
 function changeSlide(direction, projects, sections){
     var loc = window.location.hash.slice(1);
     var components = loc.split('-');
     var pname = components[0];
+    var sname;
     if(components.length > 1) sname = components[1];
     else sname = sections[0];
     var sindex = sections.indexOf(sname);
     var pindex = projects.indexOf(pname);  
+    var hash;
+    var news;
+    var newp = pname;
     if (direction == 'forward') {
-        if(sindex == sections.length-1) { //we need to advance to the first section of the next project.
-            news = sections[0];
-            if (pindex == projects.length-1){ //we need to loop around to the next project 
-                newp = projects[0];
-            }
-            else {
-                newp = projects[pindex+1];
-            }
-        } //end if for advancing to next project
-        else {
-            newp = pname;
-            news = sections[sindex+1];
+        news = getNext('forward', sname, sections);
+        if(news == sections[0]) {
+            newp = getNext('forward', pname, projects);
         }
-        setHash(newp+'-'+news)
-    } //end direction == forward if
+    }
     else { //we're going backward
-        if(sindex == 0) { //we need to advance to the last section of the previous project.
-            news = sections[sections.length-1];
-            if (pindex == 0){ //we need to loop around to the previous project 
-                newp = projects[projects.length-1];
-            }
-            else {
-                newp = projects[pindex-1];
-            }
-        } //end if for advancing to next project
-        else {
-            newp = pname;
-            news = sections[sindex-1];
-        }
-        setHash(newp+'-'+news)
-    }//end backward else
+       news = getNext('backward', sname, sections);
+       if(news == sections[sections.length - 1]) {
+                  newp = getNext('backward', pname, projects);
+       }
+    }
+    setHash(newp + '-' + news);
 }
 
 function setHash(loc) {
@@ -112,7 +118,17 @@ function init() {
         if (event.keyCode=='39') changeSlide('forward', projects, sections);
         if (event.keyCode=='37') changeSlide('backward', projects, sections);
     });
-
+    $("#up").bind("click", function(){
+        var pname = window.location.hash.split('-')[0].slice(1);
+        var newp = getNext('backward', pname, projects);
+        setHash('#'+newp);
+    });
+    
+    $("#down").bind("click", function(){
+        var pname = window.location.hash.split('-')[0].slice(1);
+        var newp = getNext('forward', pname, projects);
+        setHash('#'+newp);
+    });
     // These names of the projects used to generate navigation and content. They should map to the directory structure.
     //add hover states on the static widgets
     $('.navArrow').hover(
