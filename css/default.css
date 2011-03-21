@@ -4,6 +4,7 @@ body {
 font-family: 'Arimo', arial, serif;
 margin-top: 0px;
 background-color: #eee;
+width: 1050px;
 }
 
 .loading {
@@ -13,7 +14,6 @@ margin-top: 50px;
 
 .mainContent {
 margin: auto;
-width: 1000px;
 background-color: #fff;
 padding: 0px 10px 10px 10px;
 border: 1px solid #ccc;
@@ -115,6 +115,11 @@ cursor: pointer;
 margin: auto;
 }
 
+ /* only necessary for small width screens */
+#nav .navArrow .arrowLabel {
+ display:none;
+}
+
 #up {
 margin-top: 5px;
 }
@@ -125,7 +130,7 @@ margin-top: 5px;
 /* ===== Project contents =====*/
 #projects-container {
 float: left;
-width: 835px;
+width: 862px;
 margin-left: 15px;
 position: relative;
 }
@@ -267,19 +272,23 @@ border-radius: 0px;
         border:0px;
     }
     .mainContent {
-        width:640px;
         padding:0px 5px 0px 5px;
     }
     body {
+        width:640px;
         font-size:80%;
         margin:0px;
+        padding:0px;
+    }
+    img {
+        max-width:600px;
     }
     #header h1 {
     padding: 4px 0px 4px 0px;
     font-size:1.5em;
     }
     #projects-container {
-        width:622px;
+        width:628px;
         padding:0px;
         margin:0px;
     }
@@ -288,19 +297,48 @@ border-radius: 0px;
     }
     
     #projects {
-        width:640px;
         padding:0px;
     }
     #caroufredsel_wrapper {
-        width:640px;
+    }
+    
+    #nav {
+        width:99%;
+        text-align:center;
+        position:relative;
+    }
+    #nav .navArrow {
+        width:500px;
+        height:30px;
+        margin:auto;
+    }
+    
+    #nav .navArrow .arrowLabel {
+        position:relative;
+        top:-6px;
+        display:block;
+        
     }
     
     #up {
-        display:block;
+        width:500px;
+    }
+    #down {
+        position:absolute;
+        top:675px;
+        left:70px;
+    }
+    
+    #footer {
+        padding-top:40px;
     }
 }
 
 @media screen and (max-width: 400px) {
+    #nav {
+        height:auto;
+        border:0px;
+    }
     #projectNav { 
         display:none;
     }
@@ -335,7 +373,7 @@ border-radius: 0px;
     }
     
     img {
-        max-width:400px;
+        max-width:360px;
     }
     
 #projects .project .nameHeading {
