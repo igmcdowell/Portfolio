@@ -129,6 +129,7 @@ function init() {
         var newp = getNext('forward', pname, projects);
         setHash(newp);
     });
+    setHash(projects[0]);
     // These names of the projects used to generate navigation and content. They should map to the directory structure.
     //add hover states on the static widgets
     $('.navArrow').hover(

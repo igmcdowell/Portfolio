@@ -7,6 +7,9 @@ background-color: #eee;
 
 }
 
+img {
+    max-width:90%;
+}
 .loading {
 text-align: center;
 margin-top: 50px;
@@ -129,6 +132,17 @@ margin-top: 5px;
 
 
 /* ===== Project contents =====*/
+
+/* Manually override bad styling set by caroufredsel plugin */  
+  .caroufredsel_wrapper {
+      width:862px !important;
+  }
+  #projects {
+      width:862px !important;
+  }
+/* end style override */
+
+
 #projects-container {
 float: left;
 width: 862px;
@@ -275,16 +289,26 @@ border-radius: 0px;
     .mainContent {
         padding:0px 5px 0px 5px;
         width:630px;
+        overflow:hidden;
     }
+  
     body {
 
         font-size:80%;
         margin:0px;
         padding:0px;
     }
-    img {
-        max-width:600px;
+    
+  /* Manually override bad styling set by caroufredsel plugin */  
+    .caroufredsel_wrapper {
+        width:630px !important;
     }
+    #projects {
+        width:630px !important;
+    }
+  /* end style override */
+
+
     #header h1 {
     padding: 4px 0px 4px 0px;
     font-size:1.5em;
