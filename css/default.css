@@ -168,7 +168,6 @@ border-radius: 5px 5px 0px 0px;
 #projects .project .bottomAccent {
 height: 10px;
 background-color: #000839;
-width: 835px;
 -moz-border-radius: 0px 0px 5px 5px;
 border-radius: 0px 0px 5px 5px;
 -webkit-border-radius: 0px 0px 5px 5px;
@@ -256,3 +255,85 @@ border-radius: 0px;
 -webkit-border-radius: 0px;
 }
 /* ===== End Tabs ===== */
+
+/* ===== iPhone Style ===== */
+
+@media screen and (max-width: 640px) and (min-width: 401px)  {
+    #projectNav { 
+        display:none;
+    }
+    
+    .mainContent {
+        width:640px;
+        padding:0px 5px 0px 5px;
+    }
+    body {
+        font-size:80%;
+        margin:0px;
+    }
+    #header h1 {
+    padding: 4px 0px 4px 0px;
+    font-size:1.5em;
+    }
+    #projects-container {
+        width:622px;
+        padding:0px;
+        margin:0px;
+    }
+    #projects .project .infobox {
+        width:500px;
+    }
+    
+    #projects {
+        width:640px;
+        padding:0px;
+    }
+    #caroufredsel_wrapper {
+        width:640px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #projectNav { 
+        display:none;
+    }
+    
+    .mainContent {
+        width:400px;
+        padding:0px 5px 0px 5px;
+    }
+    body {
+        font-size:70%;
+        margin:0px;
+    }
+    #header h1 {
+    padding: 4px 0px 4px 0px;
+    font-size:1em;
+    }
+    #projects-container {
+        width:382px;
+        padding:0px;
+        margin:0px;
+    }
+    #projects .project .infobox {
+        width:350px;
+    }
+    
+    #projects {
+        width:400px;
+        padding:0px;
+    }
+    #caroufredsel_wrapper  {
+        width:382px !important;
+    }
+    
+    img {
+        max-width:400px;
+    }
+    
+#projects .project .nameHeading {
+        margin-bottom:0px;
+        text-align:center;
+        text-decoration:underline;
+    }
+}

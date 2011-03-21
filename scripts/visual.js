@@ -28,6 +28,49 @@ function setview() {
     $("#projects").trigger("slideTo", $("#" + pname+'-project'));
 }
 
+
+function changeSlide(direction, projects, sections){
+    var loc = window.location.hash.slice(1);
+    var components = loc.split('-');
+    var pname = components[0];
+    if(components.length > 1) sname = components[1];
+    else sname = sections[0];
+    var sindex = sections.indexOf(sname);
+    var pindex = projects.indexOf(pname);  
+    if (direction == 'forward') {
+        if(sindex == sections.length-1) { //we need to advance to the first section of the next project.
+            news = sections[0];
+            if (pindex == projects.length-1){ //we need to loop around to the next project 
+                newp = projects[0];
+            }
+            else {
+                newp = projects[pindex+1];
+            }
+        } //end if for advancing to next project
+        else {
+            newp = pname;
+            news = sections[sindex+1];
+        }
+        setHash(newp+'-'+news)
+    } //end direction == forward if
+    else { //we're going backward
+        if(sindex == 0) { //we need to advance to the last section of the previous project.
+            news = sections[sections.length-1];
+            if (pindex == 0){ //we need to loop around to the previous project 
+                newp = projects[projects.length-1];
+            }
+            else {
+                newp = projects[pindex-1];
+            }
+        } //end if for advancing to next project
+        else {
+            newp = pname;
+            news = sections[sindex-1];
+        }
+        setHash(newp+'-'+news)
+    }//end backward else
+}
+
 function setHash(loc) {
     window.location.hash = loc;
 }
@@ -41,14 +84,14 @@ function makeProjectCarousel(projects) {
         auto: {
             play: false
         },
-        next: {
+        /*next: {
             button: "#down",
             key: "right"
         },
         prev: {
             button: "#up",
             key: "left"
-        },
+        },*/
         pagination: {
             anchorBuilder: function() {
                 project = projects.pop();
@@ -71,7 +114,13 @@ function init() {
     $(window).hashchange( function(){    
         setview()
     }); //monitor for hashchanges and react.
-    var projects = ['emlo', 'anmo', 'recovery', 'portfolio']
+    var projects = ['emlo', 'anmo', 'recovery', 'portfolio'];
+    var sections = ['overview', 'planning', 'development', 'results'];
+    $(window).keydown( function(){
+        if (event.keyCode=='39') changeSlide('forward', projects, sections);
+        if (event.keyCode=='37') changeSlide('backward', projects, sections);
+    });
+
     // These names of the projects used to generate navigation and content. They should map to the directory structure.
     //add hover states on the static widgets
     $('.navArrow').hover(
