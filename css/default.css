@@ -202,6 +202,30 @@ margin-top: 10px;
 border: 1px solid;
 }
 
+#projects .project .video {
+    margin:auto;
+    display:block;
+}
+
+#projects .quotebox {
+    font-size:90%;
+    color:#333;
+}
+
+#projects img {
+    display:block; margin:auto; border:1px solid #ccc;
+}
+.caption {
+    text-align:center;
+    font-style:italic;
+    font-size:90%;
+    color:#444;
+}
+
+.quote {
+    font-style:italic;
+}
+
 /* End project contents */
 
 
@@ -294,7 +318,7 @@ border-radius: 0px;
   
     body {
 
-        font-size:80%;
+        font-size:90%;
         margin:0px;
         padding:0px;
     }
@@ -393,6 +417,7 @@ border-radius: 0px;
     #projects .project .infobox {
         width:330px;
     }
+
     
     #projects {
         padding:0px;
