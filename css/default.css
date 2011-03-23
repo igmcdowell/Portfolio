@@ -51,11 +51,11 @@ background: url(custom-theme/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% rep
 #nav {
 float: left;
 width: 142px;
-height: 623px;
-padding: 0px;
+height: 631px;
 background-color: white;
 border: 1px solid #ccc;
 padding: 3px;
+padding-top:15px;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
@@ -72,7 +72,7 @@ border-radius: 3px;
 #projectNav li {
 list-style: none;
 margin-left: 0px;
-margin-bottom: 5px;
+margin-bottom: 8px;
 text-align: center;
 }
 
@@ -253,6 +253,11 @@ border: 1px solid;
     margin-right:6px;
 }
 
+#projects .picture_box img {
+    margin:0px;
+    max-width:100%;
+}
+
 /* End project contents */
 
 
@@ -318,7 +323,7 @@ border-top-right-radius: 0px;
 }
         	    
 #projects .project .tabset {
-height: 612px;
+height: 630px;
 border-left: 1px solid #ccc;
 border-right: 1px solid #ccc;
 -moz-border-radius: 0px;
