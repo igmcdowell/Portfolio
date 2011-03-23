@@ -7,9 +7,6 @@ background-color: #eee;
 
 }
 
-img {
-    max-width:90%;
-}
 .loading {
 text-align: center;
 margin-top: 50px;
@@ -255,7 +252,6 @@ border: 1px solid;
 
 #projects .picture_box img {
     margin:0px;
-    max-width:100%;
 }
 
 /* End project contents */
@@ -363,8 +359,8 @@ border-radius: 0px;
     .floatCenterer .infobox{
         max-width:250px;
     }
-    .floatCenterer .picture_box{
-        max-width:250px;
+    #projects .project .picture_box img.shrinkable{
+        max-width:180px;
     }
   /* Manually override bad styling set by caroufredsel plugin */  
     .caroufredsel_wrapper {
@@ -418,13 +414,16 @@ border-radius: 0px;
     }
     #down {
         position:absolute;
-        top:675px;
+        top:705px;
         left:70px;
     }
     
     #footer {
         padding-top:40px;
     }
+    
+
+
 }
 
 @media (max-width: 400px) {
@@ -437,6 +436,10 @@ border-radius: 0px;
           width:390px !important;
       }
     /* end style override */
+    
+    #projects .project .picture_box img.shrinkable{
+        max-width:120px;
+    }
     
     #projectNav { 
         display:none;
@@ -470,7 +473,6 @@ border-radius: 0px;
     #projects .project .infobox {
         width:330px;
     }
-
     
     #projects {
         padding:0px;
@@ -498,7 +500,7 @@ border-radius: 0px;
     
     #down {
         position:absolute;
-        top:675px;
+        top:705px;
         left:50px;
     }
     
