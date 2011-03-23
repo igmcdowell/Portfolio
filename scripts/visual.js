@@ -107,7 +107,16 @@ function makeProjectCarousel(projects) {
 
 }
 
+function advanceProject(direction, projects) {
+    var pname = window.location.hash.split('-')[0].slice(1);
+    var newp;
 
+    if(direction == 'backward') newp = getNext('backward', pname, projects);
+    else newp = getNext('forward', pname, projects);
+    if($(':animated').length ==0) { //Prevent moving faster than the animations
+        setHash(newp);
+    }
+}
 function init() {
     $(window).hashchange( function(){    
         setview()
@@ -117,17 +126,18 @@ function init() {
     $(window).keydown( function(){
         if (event.keyCode=='39') changeSlide('forward', projects, sections);
         if (event.keyCode=='37') changeSlide('backward', projects, sections);
+        if (event.keyCode=='74') changeSlide('backward', projects, sections);
+        if (event.keyCode=='76') changeSlide('forward', projects, sections);
+        if (event.keyCode=='73') advanceProject('backward', projects);
+        if (event.keyCode=='75') advanceProject('forward', projects);
+
     });
     $("#up").bind("click", function(){
-        var pname = window.location.hash.split('-')[0].slice(1);
-        var newp = getNext('backward', pname, projects);
-        setHash(newp);
+        advanceProject('backward', projects);
     });
     
     $("#down").bind("click", function(){
-        var pname = window.location.hash.split('-')[0].slice(1);
-        var newp = getNext('forward', pname, projects);
-        setHash(newp);
+       advanceProject('forward', projects);
     });
     if(window.location.hash.length<1) setHash(projects[0]);
     // These names of the projects used to generate navigation and content. They should map to the directory structure.
