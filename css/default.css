@@ -2,7 +2,7 @@
 
 body {
 font-family: 'Arimo', arial, serif;
-margin-top: 0px;
+margin: 0px;
 background-color: #eee;
 
 }
@@ -18,11 +18,12 @@ margin-top: 50px;
 h2 {
     clear:both;
 }
+/* 1006px + 16px pad + 2px border = 1024px */
 .mainContent {
-width: 1028px;
+width: 1006px;
 margin: auto;
 background-color: #fff;
-padding: 0px 10px 10px 10px;
+padding: 0px 8px 10px 8px;
 border: 1px solid #ccc;
 }
 
@@ -138,10 +139,10 @@ margin-top: 5px;
 
 /* Manually override bad styling set by caroufredsel plugin */  
   .caroufredsel_wrapper {
-      width:862px !important;
+      width:848px !important;
   }
   #projects {
-      width:862px !important;
+      width:848px !important;
   }
 /* end style override */
 
@@ -151,8 +152,8 @@ margin-top: 5px;
 
 #projects-container {
 float: left;
-width: 862px;
-margin-left: 15px;
+width: 843px;
+margin-left: 8px;
 position: relative;
 }
 
@@ -249,7 +250,7 @@ border: 1px solid;
     float:left;
     position:relative;
     left:-50%;
-    margin-right:10px;
+    margin-right:6px;
 }
 
 /* End project contents */
