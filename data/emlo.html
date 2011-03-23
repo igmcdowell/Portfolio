@@ -1,29 +1,28 @@
 <div id="content">
-	<div id="overview">
+	<div id="overview" class="section-content">
 		<div class="span-image"><img src="./images/emlo_front.jpg" alt="front view of Emlo"/></div>
 		<p>
 			Emlo the "tangible broadcast buddy," is a prototype device for broadcasting your current emotion from a given location. User gestures are translated into a corresponding emotion, which is then posted (in combination with the user's location) to Twitter. Emlo was a class final project in collaboration with <a href="http://www.alisonmeier.com/Alison_Meier/Portfolio.html">Alison Meir</a> and <a href="http://www.voytekdesign.com/">Jessica Voytek</a>.
 		</p>
 	
 	</div>
-	<div id="planning">
-		<p>Emlo was born out of an interest to explore gestural expression of emotion. After brainstorming different methods of exploring this question, we settled on the idea of a digital pet able to relay how its master is feeling. Given this goal, we set about exploring how individuals might express emotion. We started with a small number of exploratory <strong>interviews</strong>, and used the output to produce a close-ended <strong>survey</strong>. Finally, we <strong>determined what to build</strong>.
+	<div id="planning" class="section-content">
+		<p>Emlo was born out of an interest to explore gestural expression of emotion. After brainstorming different methods of exploring this question, we settled on the idea of a digital pet able to relay how its master is feeling. To inform our design, we started with a small number of exploratory <strong>interviews</strong>, and used the output to produce a close-ended <strong>survey</strong>.
 			</p>
 			<h2>Interviews</h2>
-			<p>We scoured a local drugstore for tangible artifacts with unique tactile or ballistic properties that could potentially be incorporated into a final project. We settled on a ping pong ball (bouncy, aerodynamic), sponge (squishy, deformable), hair scrunchy (elastic, deformable), and hair roller (spiny, rollable).</p>
-			<p>Six participants were individually interviewed and asked to model each of eight basic emotions using the provided materials. The gestures used were recorded and clustered by action. Ten distinct gestures were identified, which served as the basis for a follow-on survey.</p>
-			<h2>Survey</h2>
+			<p>Six participants were individually interviewed and asked to model each of eight basic emotions using provided materials with different physical properties (below). The gestures and materials used were recorded and clustered. Ten distinct gestures were identified, which served as the basis for a follow-on survey.</p>
+			<img src="./images/emlo_research.jpg" alt="Research materials for emlo interivews." />
+			<h2>Survey</h2> 
 			<p>We created a clay prototype and used it to demonstrate each gesture identified in the exploratory interviews in a series of <a href="http://www.youtube.com/watch?v=TV7p-Sie1IY">short video clips</a>. We incorporated these in an <a href="http://polldaddy.com/s/8507DE474270E922">online survey</a> asking users to map each of the eight emotions to one gesture (some gestures were left over). The 35 responses showed strongest agreement in gesture/emotion mappings for anger, sadness, joy, and surprise.</p>
-			<h2>Determining What to Build</h2>
-			<p><strong>Hardware</strong>: The class was taught using Arduino, so we used a Duemilanove as the microcontroller. We assessed the top four emotion/gesture pairs for feasibility of implementation with off-the-shelf sensors, and determined we could model all four using less than $30 of additional parts.</p>
-			<p><strong>Software</strong>: We wanted to broadcast the messages created by Emlo, and settled on Twitter as the platform due to its familiarity and easy/robust API. The only option we found for reverse-geocoding coordinates was the Google Maps API, which won by default. We also wanted to add some additional functionality, such as customizable emotion labels, customizable location labels, and "listen" mode where Emlo receives data from other virtual Emlo devices. Due to my existing familiarity with Django, we decided the most robust and simple solution was to use Google App Engine as the middle layer handling these tasks. 
-				</p>
+			
 	</div>
-	<div id="development">
-		<p>While we all had input into each aspect of the project, we allocated responsibility for each component to at most two people.
-			</p>
+	<div id="development" class="section-content">
+		<h2>Hardware:</h2>
+		<p>The class focused on the Arduino Duemilanove microcontroller, which we used as the base of our stack. We then took the top four emotion/gesture pairs from our research and figured out how to model them with off-the-shelf sensors.</p>
+		<h2>Software:</h2>
+		<p> We chose Twitter for a broadcast platform to take advantage of its easy and robust API. Reverse-geocoding coordinates was accomplished using the Google Maps API. We also wanted some additional functionality, including user-customizable labels for emotions and locations, and a "listen" mode where Emlo receives and relays data from other virtual Emlo devices. Google App Engine served as the middle layer handling these tasks. </p>
 			<div class="infobox">
-				Final Project Components (lead in bold):
+				Emlo Components and Responsibilities (lead developer in bold):
 				<ul>
 					<li>Sensor Housing - Emlo's body (<strong>Jessica</strong>, Alison)
 					</li>
@@ -38,15 +37,20 @@
 					</li>
 					<li>Visual Assets - The project poster, clay prototypes, and digital renderings of Emlo (<strong>Jessica</strong>).
 					</li>
-				</ul>Complete Emlo source code is available on request.
+				</ul>
 			</div>
 	</div>
-	<div id="results">
+	<div id="results" class="section-content">
 		<p>Emlo was well received by the class and school community; The final grade for the project was an 'A+', Emlo was featured on the front page of the I School website, and asked to re-appear at several community I School recruiting events.
 			</p>
-			<img src="images/emlo_display.jpg" alt="Demonstration of Emlo pieces" />
-			<img src="images/emlo_twitter.png" alt="Twitter feed from Emlo" />
-			<p>The <a href="http://emloapp.appspot.com">administrator controls</a> are still online, as are <a href="http://twitter.com/#!/ianemlo">several</a> <a href="http://twitter.com/#!/alisonemlo">Emlo</a> <a href="http://twitter.com/#!/jessicaemlo">profiles</a> on Twitter. However, changes to the Twitter API since the original project was completed have broken tweet generation functionality. Emlo source code is available on request.
+			<div class="floatCenterer">
+			<div class="picture_box"><img src="images/emlo_display.jpg" alt="Demonstration of Emlo pieces" /><br /><span class="caption">Emlo on Display</span></div>
+			<div class="picture_box"><img src="images/emlo_twitter.png" alt="Twitter feed from Emlo" /><br /><span class="caption">The Emlo Twitter feed</span></div>
+			</div>
+			<div style="clear:both"></div>
+
+			<p>The <a href="http://emloapp.appspot.com">administrator controls</a> are still accessible on App Engine, and <a href="http://twitter.com/#!/ianemlo">several</a> <a href="http://twitter.com/#!/alisonemlo">Emlo</a> <a href="http://twitter.com/#!/jessicaemlo">profiles</a> on Twitter. However, changes to the Twitter API since the original project was completed have broken tweet generation functionality. Emlo source code is available on request.
 				</p>
+				<p>The final <a href="./reference/Emlo_report.pdf">ACM formatted report</a> on our process and findings is available for review</p>
 	</div>
 </div>

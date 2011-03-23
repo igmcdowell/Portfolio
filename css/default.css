@@ -15,6 +15,9 @@ text-align: center;
 margin-top: 50px;
 }
 
+h2 {
+    clear:both;
+}
 .mainContent {
 width: 1028px;
 margin: auto;
@@ -142,6 +145,9 @@ margin-top: 5px;
   }
 /* end style override */
 
+.section-content p:first-child {
+    margin-top:0px;
+}
 
 #projects-container {
 float: left;
@@ -225,6 +231,28 @@ border: 1px solid;
 .quote {
     font-style:italic;
 }
+#projects img.left_image {
+   float:left;
+   margin-right:8px;
+   margin-bottom:10px;
+   margin-left:20px;
+}
+
+.floatCenterer{
+    position:relative; 
+    float:left; 
+    left:50%;
+}
+#projects .picture_box {
+    text-align:center;
+    float:left;
+    position:relative;
+    left:-50%;
+    margin-right:10px;
+}
+
+
+
 
 /* End project contents */
 
@@ -322,7 +350,18 @@ border-radius: 0px;
         margin:0px;
         padding:0px;
     }
-    
+    .floatCenterer img{
+        max-width:250px;
+    }
+    .floatCenterer .infobox{
+        max-width:250px;
+    }
+    .floatCenterer .infobox{
+        max-width:250px;
+    }
+    .floatCenterer .picture_box{
+        max-width:250px;
+    }
   /* Manually override bad styling set by caroufredsel plugin */  
     .caroufredsel_wrapper {
         width:630px !important;

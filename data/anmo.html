@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<div id="content">
-			<div id="overview">
+			<div id="overview" class="section-content">
 				<p>
 					<a href="http://anmoapp.appspot.com">Anmo</a> is a mobile annotation web-application prototype built for Mobile Firefox running on the Nokia N900 handset. It allows users to highlight, star, and write notes on web pages, and offers the ability to toggle between annotate and review modes. Annotations are stored in the cloud and can be accessed, changed, and reviewed from any device. Anmo was a class final project in collaboration with <a href="http://www.alisonmeier.com/Alison_Meier/Portfolio.html">Alison Meir</a> and <a href="http://www.voytekdesign.com/">Jessica Voytek</a>. 
 				</p>
@@ -14,36 +14,39 @@
 				<div class="caption">The Anmo interface.</div>
 
 			</div>
-			<div id="planning">
+			<div id="planning" class="section-content">
 				<p>Initial planning for Anmo encompassed <strong>brainstorming</strong>, <strong>contextual inquiry</strong> and initial <strong>concept sketches</strong>.</p>
 				<h2>Brainstorming</h2>
 				<p>
+					<img class="left_image" src="./images/anmo_brainstorm.jpg" alt="poster of brainstorm ideas" />We started with the broad category of mobile browser extensions, and quickly gravitated toward the annotation space. Many of the final product features came out of this initial session.
 					</p>
 				<h2>Contextual Inquiry</h2>
-				<p>
+				<p> To get an idea of existing study habits, we observed a cross section of students engaged in annotation work for their classes. This exercise gave us useful information on the types of annotations made, typical highlight lengths, and typical study environments. Several insights had direct impact on product features.
 					</p>
 				<h2>Concept Sketches</h2>
-				<p>
+				<p><img class="left_image" src="./images/anmo_sketch.jpg" alt="concept sketch of anmo" />The final planning stage was to storyboard some typical use cases by creating low-fidelity sketches. This exercise ensured that we had fully thought through our use cases and had a workable interface.  
 					</p>
 			</div>
-			<div id="development">
-				<p>Our first step was to create a low-fidelity prototype. </p>
-				<iframe title="YouTube video player" class="video" width="480" height="390" src="http://www.youtube.com/embed/1qiRKB967_0?rel=0" frameborder="0" allowfullscreen></iframe>
-				<div class="infobox">
-					Final Project Components (Creator in parenthesis):
+			<div id="development" class="section-content">
+				<p>We started with a paper prototype to usability test the basic interactions. This <a href="http://www.youtube.com/watch?v=1qiRKB967_0">stop motion video</a> shows the prototype in action. Once we'd worked out the usability issues, we built the prototype using Javascript/CSS with Python in App Engine for the back end.</p>
+				<div class="floatCenterer">
+				<div class="picture_box"><img src ="./images/anmo_paperproto.jpg" alt="Paper prototype of Anmo"/><span class="caption">Anmo paper prototype with camera for stop motion video.</span></div>
+				<div class=" picture_box infobox" style="width:300px; clear:none; text-align:left">
+					Anmo Project Components (Creator in parenthesis):
 					<ul>
 						<li>
-							<a href="http://anmoapp.appspot.com/demo2/">Anmo Annotation Front End</a> - Provides tap-based highlighting and starring (Jessica) and transmits actions to back-end via AJAX (Ian).
+							<strong><a href="http://anmoapp.appspot.com/demo2/">Anmo Annotation Front End</a></strong> - Provides tap-based highlighting and starring (Jessica) and asynchronously transmits annotation data to the back-end via AJAX (Ian).
 						</li>
 						<li>
-							<a href="http://anmoapp.appspot.com/review/">Anmo Review Front End</a> - Collects highlights in a single view, provides controls to expand/collapse highlights. (Ian)
+							<strong><a href="http://anmoapp.appspot.com/review/">Anmo Review Front End</a></strong> - Collects highlights in a single view, provides controls to expand/collapse highlights. (Ian)
 						</li>
-						<li>Anmo Back End - Python running on App Engine. Stores annotations and drives front end. (Ian)
+						<li><strong>Anmo Back End</strong> - Python running on App Engine. Stores annotations and drives front end. (Ian)
 						</li>
-					</ul>Complete Anmo source code is available on request.
+					</ul>
+				</div>
 				</div>
 			</div>
-			<div id="results">
+			<div id="results" class="section-content">
 <iframe title="YouTube video player" class="video" width="640" height="390" src="http://www.youtube.com/embed/-ocsJV5INyk?rel=0" frameborder="0" allowfullscreen></iframe>
 				<p>The <a href="http://anmoapp.appspot.com">final Anmo prototype</a> (demo above) supported the base functionality desired on the Mobile Firefox browser. The <a href="./reference/Anmo_Process_Book.pdf">Anmo process book</a> provides a detailed write-up of the project. Source code is available on request.</p> 
 				<div class="quotebox infobox"><span class="quote">The mobile web annotation project caught my eye as well. This was a prototype based on Firefox for Mobile (who knew?) that allowed people to highlight passages of web pages they were reading. Unlike some other annotation tools, this one made it possible to toggle between the annotated passages and the full document.</span> — <a href="http://palblog.fxpal.com/?p=3578">FXPAL blog</a> from FX Palo Alto Laboratory</div>
