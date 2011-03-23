@@ -211,6 +211,7 @@ border: 1px solid;
 #projects .project .video {
     margin:auto;
     display:block;
+    max-width:90%;
 }
 
 #projects .quotebox {
@@ -250,9 +251,6 @@ border: 1px solid;
     left:-50%;
     margin-right:10px;
 }
-
-
-
 
 /* End project contents */
 
@@ -330,7 +328,7 @@ border-radius: 0px;
 
 /* ===== iPhone Style ===== */
 
-@media screen and (max-width: 640px) and (min-width: 401px)  {
+@media (max-width: 640px) and (min-width: 401px)  {
     #projectNav { 
         display:none;
     }
@@ -423,7 +421,17 @@ border-radius: 0px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
+    
+    /* Manually override bad styling set by caroufredsel plugin */  
+      .caroufredsel_wrapper {
+          width:390px !important;
+      }
+      #projects {
+          width:390px !important;
+      }
+    /* end style override */
+    
     #projectNav { 
         display:none;
     }
@@ -490,5 +498,9 @@ border-radius: 0px;
     
     #footer {
         padding-top:40px;
+    }
+    
+    #projects .project .nameHeading {
+    margin-bottom: 5px;
     }
 }

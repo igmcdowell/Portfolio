@@ -1,35 +1,37 @@
 <div id="content">
 	<div id="overview" class="section-content">
-		<p>My portfolio is a self-directed project designed to showcase a subset of my past accomplishments while also showing off my current interaction design and coding ability. The design focuses on being quick to load, easy to navigate, and responsive to a variety of input and output.</p>
-		<p>Some of the original concept work was completed through an individual assignment for an interaction design course at UC Berkeley. The final product was built in March, 2011. This is an open source project licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.  The <a href="https://github.com/igmcdowell/Portfolio">complete source code</a> is available for forking on GitHub. </p>
+		<h2>Purpose</h2>
+		<p>This portfolio provides a look at a cross-section of the type of work I have completed, while serving as an example of my current level of proficiency with web technologies. The portfolio is intended to complement <a href="http://www.squidproco.com">my resume</a> which has more detail on past work experience. </p>
+		<h2>Navigation</h2>	
+			<p>On wide format displays, you can select a project from the menu at left to explore it. On small format displays use the up and down arrow buttons to switch between projects. Access to project sections is achieved by clicking the appropriate tab on each project slide. This site also supports keyboard navigation; use left arrow/right arrow to move between sections, or i/j/k/l to jump between sections and projects.</p>
+		<h2>Project Logistics</h2>	
+		<p>Some of the original concept work was completed through an individual assignment for an interaction design course at UC Berkeley in April 2010. The final product you're currently viewing was built in March, 2011. This is an open source project licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.  The <a href="https://github.com/igmcdowell/Portfolio">complete source code</a> is available for forking on GitHub. </p>
 	</div>
 	<div id="planning" class="section-content">
 		<p>The planning of this project involved <strong>identifying the audience</strong>, <strong>determining requirements</strong>, and <strong>sketching solutions</strong>.</p>
 		<h2>Audience</h2>
-		<p>I decided that the most relevant user of my portfolio would be a hiring manager or recruiter involved in pre-screening candidates or reviewing my work prior to an interview. For either case, the needs were similar:</p>
+		<p>My target user is a hiring manager or recruiter involved in pre-screening candidates or reviewing my work prior to an interview. Potential goals of such a user include:</p>
 		<ul>
-			<li>Understand the type of projects I've worked on.</li>
-			<li>Determine my skill-level with the technologies listed on my resume.</li>
-			<li>Assess the quality of the work I've produced.</li>
-			<li>Find some material to ask questions about (interviewer), or a reason to disqualify my candidacy (recruiter/screener).</li>
-			<li>Complete the above in five minutes or less, potentially on a mobile device.</li>
+			<li>Understanding the type of projects I've worked on.</li>
+			<li>Determining my skill-level with the technologies listed on my resume.</li>
+			<li>Assessing the quality of the work I've produced.</li>
+			<li>Finding some material to ask questions about (interviewer), or a reason to disqualify my candidacy (recruiter/screener).</li>
+			<li>Completing the task in five minutes or less, potentially on a mobile device.</li>
 		</ul>
 
 		<h2>Requirements</h2>
-		<p>Based on the audience identified above, I decided that my portfolio should feature no more than four projects, show a cross-section of the type of work I've done, clearly explain my role in the project and the technologies I used, and allow comprehension at varying levels of specificity. Navigation should be as intuitive as possible, and page loads should be kept to a bare minimum.</p>
+		<p>I determined that my portfolio should show a cross-section of the type of work I've done, clearly explain my role in the project and the technologies I used, and allow for easy comprehension of the different projects at varying levels of specificity. To address speed concerns, navigation should be as intuitive as possible and provide accelerators, page loads should be kept to a bare minimum, and the scope should be restricted to at most four projects. Finally, the presentation should accommodate different display sizes and interaction modalities.</p>
 		
 		<h2>Sketches</h2>
-		<p>
-			
-		</p>
+		<p>I sketched out several different interfaces when thinking through page navigation and interaction.</p>
 	</div>
 	<div id="development" class="section-content">
-		<p>For my first pass, I built out a skeleton of the page using the best aspects of my initial drafts. My focus for the first pass was to render a single project by creating a sound structure for the content with the details of the presentation handled by CSS. Once I was happy with the layout, I focused on making the interactive site <strong>flexible</strong> and <strong>fast</strong></p>
+		<p>I produced an initial high-fidelity prototype in HTML and CSS as part of the initial coursework. The result unearthed some usability issues that I took into account when building the final site.</p>			
+			<p>The next step was to build out the view for a single project, making sure to handle presentation details in CSS. Once I was happy with the layout, I focused on making the interactive site <strong>flexible</strong> and <strong>fast</strong></p>
 		<h2>Building in Flexibility</h2>
-		<p>I started with a jQuery base to gain more robust access to the DOM. I then took advantage of the jQuery template plugin to modularize the individual projects. With this structure in place it is trivial to make changes to all projects at once, or swap out one project for another. While not as powerful as an MVC framework like Rails or Django, jQuery templates have the advantage of being able to run on any server capable of hosting HTML.</p>
+		<p>I started with a jQuery base to gain more robust access to the DOM and for access to useful add-ons. I used the jQuery template plugin to create a skeleton that can be filled with project-specific content. With this structure in place it is trivial to make changes to all projects at once, or swap out one project for another. While not as powerful as a full MVC framework like Rails or Django, jQuery templates can run on any web server.</p>
 		<h2>Making it Fast</h2>
-		<p>Knowing that my audience is potentially pressed for time and/or on a slower mobile connection, I wanted to do everything possible to speed up the experience. A pair of jQuery plugins (jQuery UI and carouFredSel) gave me access to rich interactions that eliminated the need for page loads. I find animations useful for orienting the user, but I was careful to keep them to a minimum and ensure they were fast enough that the user isn't left waiting on them.</p>
-		<p>To speed up the perceived initial load time, I pushed the content retrieval to asynchronous requests. After the initial skeleton is built by javascript, each project is retrieved in order. This allows a visitor to get acquainted with the layout and start reading about the first project while the rest of the page finishes loading.</p>
+		<p>I used a pair of jQuery plugins (jQuery UI and carouFredSel) for rich interactions that progressively reveal content and eliminate additional page loads. To speed up the perceived initial load time, I pushed actual content retrieval to a series of asynchronous requests. After the initial skeleton is built by javascript, each project is retrieved in order. This allows a visitor to get acquainted with the layout and start reading about the first project while the rest of the page finishes loading in the background. Finally, I was careful to optimize images to minimize file size, and to use Google and Microsoft hosted libraries when possible to take advantage of client-side caching.</p>
 		<h2>Source</h2>
 		<p>The <a href="https://github.com/igmcdowell/Portfolio">source code</a> is available on GitHub.</p>
 	</div>

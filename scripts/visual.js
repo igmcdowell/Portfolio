@@ -93,7 +93,7 @@ function makeProjectCarousel(projects) {
         pagination: {
             anchorBuilder: function() {
                 project = projects.pop();
-                return '<li id="' + project + '"><a href="#' + project + '" class="caroufredsel" onclick="setHash('+"'"+ project + "'"+')"><img src="images/' + project + '_thumb.png" alt="' + project + '_thumb"><br><span>' + project + '</span></a></li>';
+                return '<li id="' + project + '"><a href="#' + project + '" class="caroufredsel" onclick="setHash('+"'"+ project + "'"+')"><img src="images/' + project + '_thumb.jpg" alt="' + project + '_thumb"><br><span>' + project + '</span></a></li>';
             },
             container: "#navButtons"
         }
@@ -121,7 +121,7 @@ function init() {
     $(window).hashchange( function(){    
         setview()
     }); //monitor for hashchanges and react.
-    var projects = ['emlo', 'anmo', 'recovery', 'portfolio'];
+    var projects = ['portfolio', 'emlo', 'anmo', 'recovery'];
     var sections = ['overview', 'planning', 'development', 'results'];
     $(window).keydown( function(){
         if (event.keyCode=='39') changeSlide('forward', projects, sections);
