@@ -126,11 +126,10 @@ function init() {
     $(window).keydown( function(){
         if (event.keyCode=='39') changeSlide('forward', projects, sections);
         if (event.keyCode=='37') changeSlide('backward', projects, sections);
-        if (event.keyCode=='74') changeSlide('backward', projects, sections);
-        if (event.keyCode=='76') changeSlide('forward', projects, sections);
-        if (event.keyCode=='73') advanceProject('backward', projects);
+        if (event.keyCode=='80') changeSlide('backward', projects, sections); 
+        if (event.keyCode=='78') changeSlide('forward', projects, sections);
+        if (event.keyCode=='74') advanceProject('backward', projects);
         if (event.keyCode=='75') advanceProject('forward', projects);
-
     });
     $("#up").bind("click", function(){
         advanceProject('backward', projects);
