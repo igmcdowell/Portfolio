@@ -115,12 +115,13 @@ function portfolio() {
         }
     }
     
+    this.projects = ['portfolio', 'emlo', 'anmo', 'recovery'];
+    this.sections = ['overview', 'planning', 'development', 'results'];
+    
     this.init = function() {
         $(window).hashchange( function(){    
-               setview()
-           }); //monitor for hashchanges and react.
-           var projects = ['portfolio', 'emlo', 'anmo', 'recovery'];
-           var sections = ['overview', 'planning', 'development', 'results'];
+               this.setview()
+        }); //monitor for hashchanges and react.
            $(window).keydown( function(){
                if (event.keyCode=='39') changeSlide('forward', projects, sections);
                if (event.keyCode=='37') changeSlide('backward', projects, sections);
@@ -136,8 +137,9 @@ function portfolio() {
            $("#down").bind("click", function(){
               advanceProject('forward', projects);
            });
-           if(window.location.hash.length<1) setHash(projects[0]);
+           
            // These names of the projects used to generate navigation and content. They should map to the directory structure.
+           
            //add hover states on the static widgets
            $('.navArrow').hover(
            function() {
@@ -151,9 +153,8 @@ function portfolio() {
            $.get('./data/project_template.html',
            function(data) {
                //Retrieve the template for presenting projects and use it to set up the projects.
-               var tem = data;
                for (var i = 0; i < projects.length; i++) {
-                   setup(projects[i], tem)
+                   setup(projects[i], data)
                }
                var caroprojects = projects.slice(0);
                caroprojects.reverse();
@@ -293,8 +294,10 @@ function init() {
     var projects = ['portfolio', 'emlo', 'anmo', 'recovery'];
     var sections = ['overview', 'planning', 'development', 'results'];
     $(window).keydown( function(){
-        if (event.keyCode=='39' || event.keyCode=='78') changeSlide('forward', projects, sections);
-        if (event.keyCode=='37' || event.keyCode=='80') changeSlide('backward', projects, sections);
+        if (event.keyCode=='39') changeSlide('forward', projects, sections);
+        if (event.keyCode=='37') changeSlide('backward', projects, sections);
+        if (event.keyCode=='80') changeSlide('backward', projects, sections); 
+        if (event.keyCode=='78') changeSlide('forward', projects, sections);
         if (event.keyCode=='74') advanceProject('backward', projects);
         if (event.keyCode=='75') advanceProject('forward', projects);
     });

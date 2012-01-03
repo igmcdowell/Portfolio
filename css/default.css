@@ -4,7 +4,6 @@ body {
 font-family: 'Arimo', arial, serif;
 margin: 0px;
 background-color: #eee;
-
 }
 
 .loading {
@@ -328,7 +327,39 @@ border-radius: 0px;
 }
 /* ===== End Tabs ===== */
 
-/* ===== iPhone Style ===== */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    #header h1  {
+      margin-bottom:4px;   
+      padding:0; 
+      font-size:1.5em;
+    }
+    
+    #projects .project .tabset {
+        height:593px;
+    }
+    .tab-content {
+        font-size:75%;
+    }
+    
+    #nav {
+        height:600px;
+        padding-top:8px;
+        font-size:90%;
+    }
+    
+    #projectNav li {
+        margin-bottom:4px;
+    }
+    
+    .mainContent {
+        padding-bottom:3px;
+    }
+}
+
+
 
 @media (max-width: 640px) and (min-width: 401px)  {
     #projectNav { 
@@ -426,19 +457,23 @@ border-radius: 0px;
 
 }
 
-@media (max-width: 400px) and (min-width:321px){
+/* ===== iPhone Style ===== */
+
+@media (max-device-width: 480px) and (min-device-width:321px){
     
     /* Manually override bad styling set by caroufredsel plugin */  
       .caroufredsel_wrapper {
-          width:390px !important;
+          width:470px !important;
       }
       #projects {
-          width:390px !important;
+          width:470px !important;
       }
     /* end style override */
     
     #projects .project .picture_box img.shrinkable{
-        max-width:120px;
+        max-width:160px;
+        max-height:160px;
+        margin-bottom:5px;
     }
     
     #projectNav { 
@@ -450,7 +485,7 @@ border-radius: 0px;
     }
     .mainContent {
         padding:0px 5px 0px 5px;
-        width:390px;
+        width:468px;
     }
     body {
 
@@ -459,19 +494,19 @@ border-radius: 0px;
         padding:0px;
     }
     img {
-        max-width:360px;
+        max-width:340px;
     }
     #header h1 {
     padding: 4px 0px 4px 0px;
     font-size:1.5em;
     }
     #projects-container {
-        width:388px;
+        width:468px;
         padding:0px;
         margin:0px;
     }
     #projects .project .infobox {
-        width:330px;
+        width:410px;
     }
     
     #projects {
@@ -486,7 +521,7 @@ border-radius: 0px;
         position:relative;
     }
     #nav .navArrow {
-        width:300px;
+        width:380px;
         height:30px;
         margin:auto;
     }
@@ -513,11 +548,14 @@ border-radius: 0px;
     }
 }
 
-@media (max-width: 320px) {
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
     
     /* Manually override bad styling set by caroufredsel plugin */  
       .caroufredsel_wrapper {
           width:310px !important;
+          overflow:hidden;
       }
       #projects {
           width:310px !important;
